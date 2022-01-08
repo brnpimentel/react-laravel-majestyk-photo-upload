@@ -1,11 +1,11 @@
 ## Majestyk Photo Upload - @brnpimentel
 
-Docker
-Laravel 8.x
-MySQL 5.7.x
-PHP 8.x 
-ReactJS 17.x
-SCSS + TailwindCSS 3.x
+- Docker
+- Laravel 8.x
+- MySQL 5.7.x
+- PHP 8.x 
+- ReactJS 17.x
+- SCSS + TailwindCSS 3.x
 
 
 # Install
