@@ -9,18 +9,33 @@
 
 
 # Install
+
+
 ```
 git clone https://github.com/brnpimentel/react-laravel-majestyk-photo-upload
 cd react-laravel-majestyk-photo-upload
-cp .env.example .env
-composer install
-yarn install
-docker-compose up -d
 ```
 
-After composer is up, run the migrations for the database
+There are 2 options for installation:
+
+- Develop way  (you install all the packages at your machine and Docker mount the directory - will be mirrored - *better to see the uploaded images in real time)
+
 ```
-docker-compose exec laravel-app php artisan migrate
+cp .env.example .env
+cp Dockerfile Dockerfile.backup && cp Dockerfile.dev Dockerfile
+cp docker-compose.yaml docker-compose.yaml.backup && cp docker-compose.dev.yaml docker-compose.yaml
+
+touch database/database.sqlite
+composer install
+yarn install
+php artisan migrate
+docker-compose up --build
+```
+
+- Docker way (the files are clone to docker, all the installs happen inside the container. the files is not mirrored)
+
+```
+docker-compose up --build
 ```
 
 Open [http://localhost:8080](http://localhost:8080)
