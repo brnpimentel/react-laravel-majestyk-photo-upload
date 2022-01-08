@@ -11,6 +11,7 @@
 # Install
 ```
 git clone https://github.com/brnpimentel/react-laravel-majestyk-photo-upload
+cd react-laravel-majestyk-photo-upload
 cp .env.example .env
 composer install
 yarn install
