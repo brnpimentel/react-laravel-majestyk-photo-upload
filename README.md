@@ -22,18 +22,14 @@ There are 2 options for installation:
 
 ```
 cp .env.example .env
-cp Dockerfile Dockerfile.backup && cp Dockerfile.dev Dockerfile
-cp docker-compose.yaml docker-compose.yaml.backup && cp docker-compose.dev.yaml docker-compose.yaml
-
 touch database/database.sqlite
 composer install
 yarn install
 php artisan migrate
-docker-compose up --build
+docker-compose --file docker-compose-dev.yaml up --build 
 ```
 
 - Docker way (the files are clone to docker, all the installs happen inside the container. the files is not mirrored)
-
 ```
 docker-compose up --build
 ```

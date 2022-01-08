@@ -2,7 +2,9 @@ version: '3'
 
 services:
   laravel-app:
-    build: .
+    build: 
+      context: .
+      dockerfile: "Dockerfile-dev"
     ports:
       - "8080:80"
     volumes:
