@@ -2,7 +2,7 @@
 
 - Docker
 - Laravel 8.x
-- MySQL 5.7.x
+- SQLite
 - PHP 8.x 
 - ReactJS 17.x
 - SCSS + TailwindCSS 3.x
